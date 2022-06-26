@@ -11,7 +11,7 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  
+
 
 ## Overview
 
@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./expenses.png)
+![Screenshot](./images/Screenshot.png)
 
 
 ### Links

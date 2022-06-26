@@ -68,14 +68,32 @@ const chart = document.querySelector(".chart");
 // populateChart(data,btns);
 
 function addEventListener(){
+  let focusBtn = document.querySelector(".focus");
   const buttons = document.querySelectorAll("button");
-  buttons.forEach(button => {
+  buttons.forEach((button,index, arr) => {
     button.addEventListener("mouseover", ()=>{
       button.lastElementChild.classList.toggle("hidden");
     })
     button.addEventListener("mouseout", ()=>{
       button.lastElementChild.classList.toggle("hidden");
+    });
+    button.addEventListener("click", ()=>{
+      // button.lastElementChild.classList.toggle("hidden");
+      if(focusBtn){  
+        focusBtn.classList.remove("focus"); 
+        focusBtn.parentElement.lastElementChild.classList.remove("showPopup")       
+      }
+      if(focusBtn != button.querySelector("div")){
+        focusBtn = button.querySelector("div");
+        focusBtn.classList.add("focus");
+        button.lastElementChild.classList.add("showPopup")
+      } else{
+        focusBtn.classList.remove("focus");
+        focusBtn = null;
+      }
+      console.log(focusBtn);
     })
+    
   })
 
 }
