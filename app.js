@@ -86,7 +86,23 @@ function addEventListener(){
     button.addEventListener("mouseout", ()=>{
       button.lastElementChild.classList.toggle("hidden");
     });
-    
+    // button.addEventListener("click", ()=>{
+    //   // button.lastElementChild.classList.toggle("hidden");
+    //   if(focusBtn){  
+    //     focusBtn.classList.remove("focus"); 
+    //     focusBtn.parentElement.lastElementChild.classList.remove("showPopup")       
+    //   }
+    //   if(focusBtn != button.querySelector("div")){
+    //     focusBtn = button.querySelector("div");
+    //     focusBtn.classList.add("focus");
+    //     button.lastElementChild.classList.add("showPopup")
+    //   } else{
+    //     focusBtn.classList.remove("focus");
+    //     focusBtn = null;
+        
+    //   }
+    //   console.log(focusBtn);
+    // })
   })
 
 }
