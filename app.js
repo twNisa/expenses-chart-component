@@ -90,6 +90,7 @@ function addEventListener(){
       } else{
         focusBtn.classList.remove("focus");
         focusBtn = null;
+        
       }
       console.log(focusBtn);
     })
