@@ -32,12 +32,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](.images/expenses.jpg)
+![Screenshot](.images/expenses.png)
 
 
 ### Links
 
-- Live Site URL: (https://twnisa.github.io/expenses-chart-component-main/)
+- Live Site URL: (https://twnisa.github.io/expenses-chart-component/)
 
 
 ## My process
