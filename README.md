@@ -11,9 +11,7 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+  
 
 ## Overview
 
