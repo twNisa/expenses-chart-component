@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root{
+
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+  
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 18px;
+
+}
+
+body{
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  background-color: var(--Cream);
+ 
+}
+.container{
+  max-width: 475px;
+  margin: 100px auto;
+}
+.header{
+  background-color: var(--Soft-red);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  color: var(--Very-pale-orange);
+  margin-bottom: 20px;
+}
+p{
+  font-size: 0.85rem;
+}
+h4{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.card{
+  background: var(--Very-pale-orange);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.summary{
+  border-top: 2px var(--Cream) solid;
+  margin-top: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Medium-brown);
+  font-size: 0.85rem;
+}
+.summary h3{
+  font-size: 2.2rem;
+}
+.summary .dark-text {
+  color: black;
+  font-weight: 700;
+}
+.summary .right{
+ margin-top: 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+}
+.chart{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  /* height: 150px; */
+  align-items: flex-end;
+  position: relative;
+  padding-top: 40px;
+
+}
+.chart button{
+  flex: 1;
+  border: none;
+  background-color: var(--Very-pale-orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.chart button .popup{
+  color:white;
+  background-color: var(--Dark-brown);
+  padding: 8px;
+  border-radius: 5px;
+  position: absolute;
+  top:0;
+  justify-self: center;
+}
+.chart .bar{
+  background-color: var(--Soft-red);
+  height: 150px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.bar:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+.bar.focus{
+  background-color: var(--Cyan);
+}
+.hidden{
+  display:none;
+}
+@media (max-width:475px){
+  .container{
+    margin-top: 0;
+    padding: 10px;
+  }
+}
