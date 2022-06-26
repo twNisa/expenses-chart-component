@@ -125,7 +125,7 @@ h4{
   display:none;
   transition: all 10s ease-in-out;
 }
-.showPopup{
+.focus{
   display: block;
 }
 @media (max-width:475px){

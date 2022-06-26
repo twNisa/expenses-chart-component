@@ -35,6 +35,10 @@ function populateChart(data, chart){
   })
 
   //build button
+  const today = new Date();
+  const d = today.getDay()
+  const weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
+
   data.forEach((day, index) => {
     const height = data[index]["amount"]*2;
     const button = document.createElement("button");
@@ -57,6 +61,12 @@ function populateChart(data, chart){
     button.appendChild(pDay);
     button.appendChild(pPopup);
     chart.appendChild(button)
+
+    if(data[index]["day"] === weekdays[d]){
+
+      div.classList.add("focus")
+      pPopup.classList.add("focus")
+    }
   });
 
   // const button = document.createElement("button");
@@ -68,7 +78,6 @@ const chart = document.querySelector(".chart");
 // populateChart(data,btns);
 
 function addEventListener(){
-  let focusBtn = document.querySelector(".focus");
   const buttons = document.querySelectorAll("button");
   buttons.forEach((button,index, arr) => {
     button.addEventListener("mouseover", ()=>{
@@ -77,23 +86,6 @@ function addEventListener(){
     button.addEventListener("mouseout", ()=>{
       button.lastElementChild.classList.toggle("hidden");
     });
-    button.addEventListener("click", ()=>{
-      // button.lastElementChild.classList.toggle("hidden");
-      if(focusBtn){  
-        focusBtn.classList.remove("focus"); 
-        focusBtn.parentElement.lastElementChild.classList.remove("showPopup")       
-      }
-      if(focusBtn != button.querySelector("div")){
-        focusBtn = button.querySelector("div");
-        focusBtn.classList.add("focus");
-        button.lastElementChild.classList.add("showPopup")
-      } else{
-        focusBtn.classList.remove("focus");
-        focusBtn = null;
-        
-      }
-      console.log(focusBtn);
-    })
     
   })
 
